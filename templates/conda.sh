@@ -1,14 +1,18 @@
 #!/bin/bash
 set -e
 
+source ./_vars.sh
+source ./_extra_envs.sh
 
 cd  $CW_BUILD_TMPDIR
 echo "export env_root=$CW_INSTALLATION_PATH/miniconda/envs/$CW_ENV_NAME/" >> _extra_envs.sh
 echo "export env_root=$CW_INSTALLATION_PATH/miniconda/envs/$CW_ENV_NAME/" >> _vars.sh
 export env_root=$CW_INSTALLATION_PATH/miniconda/envs/$CW_ENV_NAME/
 
-cd $CW_INSTALLATION_PATH
+print_info $CW_BUILD_TMPDIR
+print_info $CW_INSTALLATION_PATH
 
+cd $CW_INSTALLATION_PATH
 
 print_info "Using miniconda version Miniconda3-$CW_CONDA_VERSION-$CW_CONDA_ARCH" 1
 print_info "Downloading miniconda " 2

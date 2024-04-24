@@ -16,6 +16,7 @@ if [[ ${CW_TEMPLATE_SCRIPT+defined} ]];then
     cp $SCRIPT_DIR/templates/$CW_TEMPLATE_SCRIPT $CW_BUILD_TMPDIR/_inst_dir
 fi
 cp $SCRIPT_DIR/common_functions.sh $CW_BUILD_TMPDIR/_inst_dir
+cp $SCRIPT_DIR/templates/* $CW_BUILD_TMPDIR/_inst_dir
 
 cd $CW_BUILD_TMPDIR
 chmod +x ./_sing_inst_script.sh
